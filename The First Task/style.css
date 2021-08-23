@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.live-betting-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.live-betting-main {
+    max-width: 700px;
+    width: 100%;
+    background-color: #DEDEDE;
+    padding: 5px 8px 2px 8px;
+}
+
+.live-betting-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px 0 15px;
+}
+
+.live-betting-container {
+    background-color: #262626;
+    margin-bottom: 22px;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+}
+
+.live-betting-container:nth-child(2n) {
+    padding-bottom: 20px;
+}
+
+.live-betting-selector {
+    display: flex;
+}
+
+.live-betting-title {
+    color: #EE5A23;
+    text-transform: uppercase;
+}
+
+.live-betting-selector-item {
+    background-color: #262626;
+    padding: 10px 12px;
+    color: #FFFF;
+    cursor: pointer;
+}
+
+.live-betting-selector-item:first-child {
+    border-top-right-radius: 50px 20px;
+    border-top-left-radius: 50px 20px;
+}
+
+.live-betting-selector-item:last-child {
+    border-top-right-radius: 24px 24px;
+    border-top-left-radius: 20px 17px;
+    background-color: #3F3F3F;
+    color: #979797;
+}
+
+.live-betting-arrow {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #FFFF;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+.live-betting-table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.live-betting-list {
+    display: flex;
+    color: #DEDEDE;
+}
+
+.live-betting-table {
+    display: flex;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.live-betting-table p {
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+.live-betting-table span {
+    display: block;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.live-betting-game-flex {
+    display: flex;
+}
+
+.live-betting-game-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #3F3F3F;
+}
+
+.live-betting-game-time {
+    margin-right: 20px;
+}
+
+.live-betting-game-heading p {
+    color: #979797;
+    font-size: 16px;
+}
+
+.live-betting-game-item-main-block {
+    padding: 5px 12px 5px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.live-betting-game-info {
+    display: flex;
+}
+
+.live-betting-game-info p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.live-betting-game-score {
+    display: flex;
+}
+
+.live-betting-game-score span {
+    color: #1F4457;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.live-betting-game-score p {
+    color: #FFFF;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.live-betting {
+    max-width: 294px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live-betting-time p {
+    color: #979797;
+}
+
+.live-betting-total-event {
+    width: 100%;
+    display: flex;
+    margin-left: 20px;
+}
+
+.game-boxe {
+    max-width: 56px;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(#823C45, #2A5F96);
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.more {
+    max-width: 40px;
+    width: 100%;
+    height: 30px;
+    background-color: #DEDEDE;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more p {
+    font-size: 15px;
+}
+
+.open-more-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dropDown {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropDown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-top: 1.8px solid #ffff;
+    border-left: 1.8px solid #ffff;
+    width: 9px;
+    height: 9px;
+    transform: rotate( -135deg);
+}

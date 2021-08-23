@@ -1,0 +1,71 @@
+body {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#selectColor {
+  width: 120px;
+  height: 40px;
+  padding: 0 15px;
+  outline: none;
+}
+
+.envelope {
+  border: 6px solid #ffff;
+  height: 262.5px;
+  width: 420px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.envelope:before, .envelope:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 315px;
+  width: 315px;
+  border: 8.4px solid #ffff;
+  border-radius: 42px 42px 20px 42px;
+}
+
+.envelope:before {
+  top: -50px;
+  bottom: -18px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%) rotate(45deg);
+          transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.envelope:after {
+  left: 50%;
+  top: -20px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-box-shadow: 1px 1px 20px 1px #ffff;
+          box-shadow: 1px 1px 20px 1px #ffff;
+}
+
+@media screen and (max-width: 576px) {
+  .envelope {
+    width: 285px;
+    height: 194.5px;
+  }
+  .envelope:after {
+    top: -89px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

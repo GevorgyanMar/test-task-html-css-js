@@ -1,0 +1,58 @@
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    $size: 420px;
+    $bg: black;
+    #selectColor {
+        width: 120px;
+        height: 40px;
+        padding: 0 15px;
+        outline: none;
+    }
+    
+    .envelope {
+        border: 6px solid #ffff;
+        height: $size/1.6;
+        width: $size;
+        background-color: $bg;
+        position: relative;
+        overflow: hidden;
+        margin: 50px auto;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: $bg;
+            height: $size * 0.75;
+            width: $size * 0.75;
+            border: 0.02 * $size solid #ffff;
+            border-radius: $size * 0.1 $size * 0.1 20px $size * 0.1;
+        }
+        &:before {
+            top: -50px;
+            bottom: -18px;
+            left: 50%;
+            transform: translate(-50%, 50%) rotate(45deg);
+        }
+        &:after {
+            left: 50%;
+            top: -20px;
+            transform: translate(-50%, -50%) rotate(45deg);
+            box-shadow: 1px 1px 20px 1px #ffff;
+        }
+    }
+    
+    @media screen and (max-width:576px) {
+        .envelope {
+            width: 285px;
+            height: 194.5px;
+            &:after {
+                top: -89px;
+            }
+        }
+    }

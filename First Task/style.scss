@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Varibele 
+$mainBg:#DEDEDE;
+$betTitle:#EE5A23;
+$tabActiv:#262626;
+$tabBg:#3F3F3F;
+$white:#ffff;
+$enable:#979797;
+// Mixin
+@mixin mixFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin mixinCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin mixinFont {
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+@mixin mixinBox {
+    max-width: 56px;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(#823C45, #2A5F96);
+    border-radius: 10px;
+}
+
+.live-betting-section {
+    max-width: 700px;
+    width: 100%;
+    background-color: $mainBg;
+    padding: 5px 8px 2px 8px;
+    .bet-header {
+        @include mixFlex();
+        padding: 8px 15px 0 15px;
+        h3 {
+            color: $betTitle;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        .bet-tab-selector {
+            @include mixFlex();
+            .bet-tab {
+                cursor: pointer;
+                padding: 10px 12px;
+                color: $white;
+                background-color: $tabActiv;
+                &:first-child {
+                    border-top-right-radius: 50px 20px;
+                    border-top-left-radius: 50px 20px;
+                }
+                &:last-child {
+                    border-top-right-radius: 24px 24px;
+                    border-top-left-radius: 20px 17px;
+                    background-color: #3F3F3F;
+                    color: $enable;
+                }
+            }
+        }
+    }
+    .sports-list {
+        background-color: $tabActiv;
+        margin-bottom: 22px;
+        border-top-left-radius: 15px 15px;
+        border-top-right-radius: 15px 15px;
+        &:nth-child(2n) {
+            padding-bottom: 20px;
+        }
+        .sports-list-header {
+            @include mixFlex();
+            padding: 10px 25px;
+            cursor: pointer;
+            .game-tabel {
+                @include mixFlex();
+                .tabel-arrow {
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid #FFFF;
+                    border-top: none;
+                    border-left: none;
+                    transform: rotate( 45deg);
+                }
+                .game-name {
+                    @include mixFlex();
+                    @include mixinFont();
+                    margin-left: 7px;
+                    margin-right: 7px;
+                    span {
+                        display: block;
+                        margin-left: 4px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+            .game-icon {
+                font-size: 14px;
+                color: #ffff;
+            }
+        }
+        .event-section {
+            background-color: $tabBg;
+            padding: 5px 10px;
+            color: $enable;
+            font-size: 16px;
+            @include mixFlex();
+            .event-game-heading {
+                @include mixFlex();
+                .time-title {
+                    margin-right: 20px;
+                }
+                .game-win-streak p {
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+            .game-win-streak {
+                width: 100%;
+                @include mixFlex();
+            }
+        }
+        .sports-item-list {
+            cursor: pointer;
+            @include mixFlex();
+            padding: 5px 5px 5px 15px;
+            border-bottom: 1px solid #CCCCCC;
+            .game-score {
+                display: flex;
+                span {
+                    color: #1F4457;
+                    font-size: 17px;
+                    display: block;
+                }
+                p {
+                    @include mixinFont();
+                    margin-left: 6px;
+                    margin-right: 6px;
+                }
+            }
+            .team-score {
+                max-width: 294px;
+                width: 100%;
+                @include mixFlex();
+                .score-time p {
+                    @include mixinFont();
+                    color: $enable;
+                }
+                .win-result {
+                    width: 100%;
+                    margin-left: 20px;
+                    @include mixFlex();
+                    .result-box {
+                        @include mixinBox();
+                        @include mixinCenter();
+                        color: $white;
+                        font-size: 15px;
+                        margin-right: 8px;
+                    }
+                }
+                .game-more-inf {
+                    max-width: 40px;
+                    width: 100%;
+                    height: 30px;
+                    background-color: #DEDEDE;
+                    border-radius: 8px;
+                    @include mixinCenter();
+                    font-size: 14px;
+                }
+            }
+        }
+        .open-more-game {
+            @include mixinCenter();
+            margin-top: 8px;
+            cursor: pointer;
+            .dropDown {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                    border-top: 1.8px solid #ffff;
+                    border-left: 1.8px solid #ffff;
+                    width: 9px;
+                    height: 9px;
+                    transform: rotate( -135deg);
+                }
+            }
+        }
+    }
+}
